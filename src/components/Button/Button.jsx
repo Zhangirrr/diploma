@@ -3,7 +3,9 @@ import s from './Button.module.scss'
 
 function Button() {
   return (
-    <div>Button</div>
+    <div>
+      <button className={s.btn}>Button</button>
+    </div>
   )
 }
 
