@@ -1,4 +1,5 @@
 import React from 'react'
+import s from './styles/main.scss'
 
 function App() {
   return (
