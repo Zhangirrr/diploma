@@ -11,8 +11,15 @@
 
 @mixin desktop() {
   @media (min-width: 800px) {
-
+      @content;
   }
+}
+
+@mixin container($max-width: 1376px, $padding: 40px) {
+  width: 100%;
+      min-width: $max-width;
+      padding: 0 $padding;
+      margin: 0 auto;
 }
 
 // .button {
