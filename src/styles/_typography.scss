@@ -9,3 +9,11 @@
 		url('../fonts/gilroy-regular.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/gilroy-regular.svg#gilroy-regular') format('svg'); /* Chrome < 4, Legacy iOS */
 }
+
+@font-face {
+    font-family: "Gogol";
+    src: url("https://fontsforyou.com/fonts/g/Gogol.otf");
+}
+.your-style {
+    font-family: "Gogol";
+}

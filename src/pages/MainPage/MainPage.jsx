@@ -8,6 +8,7 @@ import slide4 from "../../images/slide-4.png";
 
 import s from './MainPage.module.scss'
 import Button from '../../components/Button/Button';
+import Footer from '../../components/Footer/Footer';
 
 const slides = [
   {
@@ -34,6 +35,7 @@ function MainPage() {
       <div className={s.container}>
         <Slider slides={slides}/>
         <Button />
+        <Footer />
       </div>
     </div>
   )
