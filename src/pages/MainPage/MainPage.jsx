@@ -5,10 +5,11 @@ import slide1 from "../../images/slide-1.png";
 import slide2 from "../../images/slide-2.png";
 import slide3 from "../../images/slide-3.png";
 import slide4 from "../../images/slide-4.png";
+import Header from '../../components/Header';
+import Button from '../../components/Button';
+import Footer from '../../components/Footer';
 
 import s from './MainPage.module.scss'
-import Button from '../../components/Button/Button';
-import Footer from '../../components/Footer/Footer';
 
 const slides = [
   {
@@ -33,6 +34,7 @@ function MainPage() {
   return (
     <div>
       <div className={s.container}>
+        <Header />
         <Slider slides={slides}/>
         <Button />
         <Footer />

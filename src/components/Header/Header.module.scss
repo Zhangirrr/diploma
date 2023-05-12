@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A77BC;
+    font-family: "Gilroy-Regular";
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+
+        .logo {
+            width: 250px;
+        }
+    }
+
+    .title {
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 35px;
+    }
+
+    .tickets {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 35px;
+        width: 100%;
+        max-width: 1000px;
+
+        .cityFrom, .cityTo, .dateFrom, .dateTo, .passenger {
+            height: 60px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+
+    .animation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+
+        .image1, .image2, .image3, .image4, .image5, .image6 {
+            width: 100%;
+            max-width: 80px;
+            height: 100%;
+            transition: 1s;
+        }
+
+        .image1:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+
+        .image2:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+
+        .image3:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+
+        .image4:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+
+        .image5:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+
+        .image6:hover {
+            margin-top: -20px;
+            transition: 1s;
+        }
+    }
+}
