@@ -39,6 +39,7 @@ function Header() {
         <img className={s.image5} src={HeaderImage5} alt="" />
         <img className={s.image6} src={HeaderImage6} alt="" />
       </div>
+
     </div>
   )
 }
