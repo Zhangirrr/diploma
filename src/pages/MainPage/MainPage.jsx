@@ -35,9 +35,11 @@ function MainPage() {
     <div>
       <div className={s.container}>
         <Header />
-        {/* <Slider slides={slides}/> */}
-        {/* <Button /> */}
-        {/* <Footer /> */}
+        <div className={s.slider}>
+          <Slider slides={slides}/>
+        </div>        
+        <Button />
+        <Footer />
       </div>
     </div>
   )
