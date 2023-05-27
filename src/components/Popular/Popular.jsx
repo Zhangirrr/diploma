@@ -3,7 +3,9 @@ import s from './Popular.module.scss'
 
 function Popular() {
   return (
-    <div>Popular</div>
+    <div className={s.popular}>
+      <div className={s.container}></div>
+    </div>
   )
 }
 

@@ -7,6 +7,7 @@
     padding-right: 40px;
     padding-top: 20px;
     position: relative;
+    height: 420px;
 
     .menu {
         display: flex;
@@ -17,8 +18,27 @@
 
         .logo {
             width: 250px;
+            left: 0;
         }
     }
+
+    .rightBlock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 320px;
+    }
+    .telephone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .icon {
+            width: 40px;
+            height: 100%;
+        }
+    }    
 
     .title {
         color: white;
@@ -43,45 +63,95 @@
             border-radius: 10px;
             padding: 10px;
         }
+    }
 
-        .react-datepicker {
-            z-index: 1;
+    // .animation {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-evenly;
+    //     align-items: center;
+    //     position: relative;
+    //     overflow: visible;
+    //     margin: 0 auto;
+    //   }
+
+    // .animation .image1,
+    // .animation .image2,
+    // .animation .image3,
+    // .animation .image4,
+    // .animation .image5,
+    // .animation .image6 {
+    //     flex: 0 0 auto;
+    //     width: 100%;
+    //     max-width: 80px;
+    //     transition: 1s;
+    //     bottom: -60px;
+    //     position: relative;
+    //     align-items: center;
+    //     margin-right: 10px;
+    // }
+
+    // .animation .image1:hover,
+    // .animation .image2:hover,
+    // .animation .image3:hover,
+    // .animation .image4:hover,
+    // .animation .image5:hover,
+    // .animation .image6:hover {
+    // transform: translateY(-10px);
+    // transition: transform 0.3s ease-in-out;
+    // }
+
+    .plain {
+        position: relative;
+        overflow: hidden;
+        width: 250px;
+        margin-top: 40px;
+        left: 150px;
+        animation: movingAnimation 6s infinite;
+    }
+
+    @keyframes movingAnimation {
+        0% {
+          transform: translateY(0);
         }
-    }
-
-    .animation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-        overflow: visible;
-        margin: 0 auto;
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
       }
-
-    .animation .image1,
-    .animation .image2,
-    .animation .image3,
-    .animation .image4,
-    .animation .image5,
-    .animation .image6 {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 80px;
-        transition: 1s;
-        bottom: -60px;
-        position: relative;
-        align-items: center;
-        margin-right: 10px;
+    
+    .cloud1 {
+        width: 80px;
+        position: absolute;
+        bottom: 15px;
+        left: 100%; /* Начальное положение за пределами экрана справа */
+        animation: cloud1Animation 20s linear infinite;
     }
 
-    .animation .image1:hover,
-    .animation .image2:hover,
-    .animation .image3:hover,
-    .animation .image4:hover,
-    .animation .image5:hover,
-    .animation .image6:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease-in-out;
+    .cloud2 {
+        width: 80px;
+        position: absolute;
+        bottom: 65px;
+        left: 100%; /* Начальное положение за пределами экрана справа */
+        animation: cloud1Animation 50s linear infinite;
+    }
+
+    .cloud3 {
+        width: 80px;
+        position: absolute;
+        bottom: 45px;
+        left: 100%; /* Начальное положение за пределами экрана справа */
+        animation: cloud1Animation 35s linear infinite;
+    }
+
+    @keyframes cloud1Animation {
+        0% {
+            transform: translateX(100%); /* Начальное положение за пределами экрана справа */
+        }
+        100% {
+            transform: translateX(-2000%); /* Конечное положение за пределами экрана слева */
+        }
     }
 }

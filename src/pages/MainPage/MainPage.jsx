@@ -10,6 +10,7 @@ import Button from '../../components/Button';
 import Footer from '../../components/Footer';
 
 import s from './MainPage.module.scss'
+import Popular from '../../components/Popular/Popular';
 
 const slides = [
   {
@@ -34,10 +35,9 @@ function MainPage() {
   return (
     <div>
       <div className={s.container}>
-        <Header />
-        <div className={s.slider}>
-          <Slider slides={slides}/>
-        </div>        
+        <Header className={s.header} />
+        <Popular />
+        <Slider slides={slides}/>
         <Button />
         <Footer />
       </div>
