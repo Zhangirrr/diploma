@@ -4,6 +4,20 @@ import 'react-datepicker/dist/react-datepicker.css';
 import s from './Header.module.scss'
 
 import Logo from '../../images/logo-white.png';
+<<<<<<< HEAD
+=======
+import HeaderImage1 from '../../images/header-image-1.png';
+import HeaderImage2 from '../../images/header-image-2.png';
+import HeaderImage3 from '../../images/header-image-3.png';
+import HeaderImage4 from '../../images/header-image-4.png';
+import HeaderImage5 from '../../images/header-image-5.png';
+import HeaderImage6 from '../../images/header-image-6.png';
+import Plane from "../../images/plane.png";
+import Cloud1 from "../../images/cloud1.png";
+import Cloud2 from "../../images/cloud2.png";
+import Cloud3 from "../../images/cloud3.png";
+import iconTelephone from "../../images/icon-telephone.png";
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
 import Button from '../Button';
 import AnimatedIcons from '../AnimatedIcons/AnimatedIcons';
 
@@ -15,7 +29,13 @@ function Header() {
     <div className={s.header}>
       <div className={s.menu}>
         <img className={s.logo} src={Logo} alt="" />
-        <div>Личный кабинет</div>
+        <div className={s.rightBlock}>
+          <div className={s.telephone}>
+            <img className={s.icon} src={iconTelephone} alt="" />
+            <div className={s.telNumber}>+ 7 701 555 66 77</div>
+          </div>
+          <div>Личный кабинет</div>
+        </div>
       </div>
 
       <h2 className={s.title}>
@@ -43,7 +63,36 @@ function Header() {
         <input className={s.passenger} type="text" placeholder="Пассажиры" />
         <Button />
       </div>
+<<<<<<< HEAD
         <AnimatedIcons />
+=======
+
+      <img className={s.plain} src={Plane} alt="" />               
+      <img className={`${s.cloud1} cloud1`} src={Cloud1} alt="" />
+      <img className={`${s.cloud2} cloud2`} src={Cloud2} alt="" />
+      <img className={`${s.cloud3} cloud3`} src={Cloud3} alt="" />
+
+      
+
+      {/* <div className={s.tickets}>
+        <input className={s.cityFrom} type="text" placeholder="Откуда" />
+        <input className={s.cityTo} type="text" placeholder="Куда" />
+        <input className={s.dateFrom} type="text" placeholder="Туда" />
+        <input className={s.dateTo} type="text" placeholder="Обратно" />
+        <input className={s.passenger} type="text" placeholder="Пассажиры" />
+        <Button />
+      </div> */}
+
+        {/* <div className={s.animation}>
+          <img className={s.image1} src={HeaderImage1} alt="" />
+          <img className={s.image2} src={HeaderImage2} alt="" />
+          <img className={s.image3} src={HeaderImage3} alt="" />
+          <img className={s.image4} src={HeaderImage4} alt="" />
+          <img className={s.image5} src={HeaderImage5} alt="" />
+          <img className={s.image6} src={HeaderImage6} alt="" />
+        </div> */}
+
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
     </div>
   )
 }

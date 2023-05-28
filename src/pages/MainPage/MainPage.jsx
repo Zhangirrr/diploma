@@ -9,8 +9,13 @@ import Header from "../../components/Header";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 
+<<<<<<< HEAD
 import s from "./MainPage.module.scss";
 import AnimatedIcons from "../../components/AnimatedIcons/AnimatedIcons";
+=======
+import s from './MainPage.module.scss'
+import Popular from '../../components/Popular/Popular';
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
 
 const slides = [
   {
@@ -35,11 +40,18 @@ function MainPage() {
   return (
     <div>
       <div className={s.container}>
+<<<<<<< HEAD
         <Header />
         <div className={s.slider}>
           <Slider slides={slides} />
         </div>
         {/* <Button /> */}
+=======
+        <Header className={s.header} />
+        <Popular />
+        <Slider slides={slides}/>
+        <Button />
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
         <Footer />
       </div>
     </div>
