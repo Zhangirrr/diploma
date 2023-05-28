@@ -1,10 +1,15 @@
-import React from 'react'
-import s from './DestinationPage.module.scss'
+import React from "react";
+import s from "./DestinationPage.module.scss";
+import Maps from "../../components/Maps";
+import Header from "../../components/Header";
 
 function DestinationPage() {
   return (
-    <div>DestinationPage</div>
-  )
+    <div className={s.wrapper}>
+      <Header />
+        <Maps />
+    </div>
+  );
 }
 
-export default DestinationPage
+export default DestinationPage;
