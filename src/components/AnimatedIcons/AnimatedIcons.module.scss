@@ -1,0 +1,35 @@
+.animation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  .animation .image1,
+  .animation .image2,
+  .animation .image3,
+  .animation .image4,
+  .animation .image5,
+  .animation .image6 {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 110px;
+    transition: 1s;
+    bottom: -70px;
+    position: relative;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .animation .image1:hover,
+  .animation .image2:hover,
+  .animation .image3:hover,
+  .animation .image4:hover,
+  .animation .image5:hover,
+  .animation .image6:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+  }

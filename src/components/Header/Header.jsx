@@ -4,6 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import s from './Header.module.scss'
 
 import Logo from '../../images/logo-white.png';
+<<<<<<< HEAD
+=======
 import HeaderImage1 from '../../images/header-image-1.png';
 import HeaderImage2 from '../../images/header-image-2.png';
 import HeaderImage3 from '../../images/header-image-3.png';
@@ -15,7 +17,9 @@ import Cloud1 from "../../images/cloud1.png";
 import Cloud2 from "../../images/cloud2.png";
 import Cloud3 from "../../images/cloud3.png";
 import iconTelephone from "../../images/icon-telephone.png";
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
 import Button from '../Button';
+import AnimatedIcons from '../AnimatedIcons/AnimatedIcons';
 
 function Header() {
   const [dateFrom, setDateFrom] = useState(null);
@@ -59,6 +63,9 @@ function Header() {
         <input className={s.passenger} type="text" placeholder="Пассажиры" />
         <Button />
       </div>
+<<<<<<< HEAD
+        <AnimatedIcons />
+=======
 
       <img className={s.plain} src={Plane} alt="" />               
       <img className={`${s.cloud1} cloud1`} src={Cloud1} alt="" />
@@ -85,6 +92,7 @@ function Header() {
           <img className={s.image6} src={HeaderImage6} alt="" />
         </div> */}
 
+>>>>>>> 7091f1bbc60d1030bc068a81dd0553bbac9b75fc
     </div>
   )
 }

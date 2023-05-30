@@ -1,0 +1,94 @@
+{
+  "markers": [
+    {
+      "id": 1,
+      "city": "Павлодар",
+      "coords": "52.285577, 76.940722",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 2,
+      "city": "Алмата",
+      "coords": "43.273564, 76.914851",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 3,
+      "city": "Астана",
+      "coords": "51.128201, 71.430429",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 4,
+      "city": "Шымкент",
+      "coords": "42.315521, 69.586942",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 5,
+      "city": "Актобе",
+      "coords": "50.300377, 57.154555",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 6,
+      "city": "Караганда",
+      "coords": "49.807760, 73.088504",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 7,
+      "city": "Тараз",
+      "coords": "42.899664, 71.392727",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 8,
+      "city": "Усть-Каменогорск",
+      "coords": "49.948325, 82.627848",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 9,
+      "city": "Атырау",
+      "coords": "47.106799, 51.916874",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 10,
+      "city": "Петропавловск",
+      "coords": "54.861860, 69.139617",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 11,
+      "city": "Семей",
+      "coords": "50.404976, 80.249235",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 12,
+      "city": "Костанай",
+      "coords": "53.214496, 63.632100",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 13,
+      "city": "Актау",
+      "coords": "43.635588, 51.168245",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 14,
+      "city": "Уральск",
+      "coords": "51.204030, 51.370528",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    },
+    {
+      "id": 15,
+      "city": "Туркестан",
+      "coords": "43.302025, 68.268979",
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+    }
+  ]
+}
