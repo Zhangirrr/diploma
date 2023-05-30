@@ -8,9 +8,11 @@ import slide4 from "../../images/slide-4.png";
 import Header from '../../components/Header';
 import Button from '../../components/Button';
 import Footer from '../../components/Footer';
+import Popular from '../../components/Popular';
+import Map from "../../components/Map";
+import About from "../../components/About";
 
 import s from './MainPage.module.scss'
-import Popular from '../../components/Popular/Popular';
 
 const slides = [
   {
@@ -38,6 +40,8 @@ function MainPage() {
         <Header className={s.header} />
         <Popular />
         <Slider slides={slides}/>
+        <About />
+        <Map />
         <Button />
         <Footer />
       </div>
