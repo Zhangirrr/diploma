@@ -14,7 +14,6 @@ import About from "../../components/About";
 
 import s from "./MainPage.module.scss";
 import AnimatedIcons from "../../components/AnimatedIcons/AnimatedIcons";
-// import s from './MainPage.module.scss'
 
 const slides = [
   {
