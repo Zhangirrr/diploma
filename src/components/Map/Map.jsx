@@ -7,8 +7,11 @@ import s from './Map.module.scss';
 function Map() {
   return (
     <div className={s.map}>
+      <div className={s.overlay}>
+        <div className={s.title}>Найдите билеты на карте</div>
+      </div>
+      
       <img className={s.image} src={MapBanner} alt="" />
-      <div className={s.title}>Найдите билеты на карте</div>
     </div>
   )
 }

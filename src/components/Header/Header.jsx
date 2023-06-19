@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import s from './Header.module.scss'
 
 import Logo from '../../images/logo-white.png';
-import Button from '../Button';
+// import Button from '../Button';
 import AnimatedPlane from '../AnimatedPlane';
 import iconTelephone from "../../images/icon-telephone.png";
 
@@ -35,7 +35,7 @@ function Header() {
       </div>
 
       <h2 className={s.title}>
-        Бронирование билетов
+        Бронирование авиабилетов
       </h2>
 
       <div className={s.tickets}>
@@ -57,7 +57,8 @@ function Header() {
         />
 
         <input className={s.passenger} type="text" placeholder="Пассажиры" />
-        <Button />
+        <button className={s.button}>Найти билет</button>
+        {/* <Button /> */}
       </div>
         <AnimatedPlane />
     </div>

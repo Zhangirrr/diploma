@@ -48,7 +48,8 @@ function MainPage() {
         <Slider slides={slides}/>
         <About />
         <Map />
-        <Button />
+        <Popular />
+        {/* <Button /> */}
         <Footer />
       </div>
     </div>
