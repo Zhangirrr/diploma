@@ -5,7 +5,7 @@ import s from './Header.module.scss'
 
 import Logo from '../../images/logo-white.png';
 import Button from '../Button';
-import AnimatedIcons from '../AnimatedIcons/AnimatedIcons';
+import AnimatedPlane from '../AnimatedPlane';
 import iconTelephone from "../../images/icon-telephone.png";
 
 function Header() {
@@ -50,7 +50,7 @@ function Header() {
         <input className={s.passenger} type="text" placeholder="Пассажиры" />
         <Button />
       </div>
-        <AnimatedIcons />
+        <AnimatedPlane />
     </div>
   )
 }

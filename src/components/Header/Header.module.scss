@@ -3,8 +3,6 @@
   flex-direction: column;
   background-color: #1a77bc;
   font-family: "Gilroy-Regular";
-  padding-left: 40px;
-  padding-right: 40px;
   padding-top: 20px;
   position: relative;
 
@@ -14,6 +12,8 @@
     align-items: center;
     justify-content: space-between;
     color: white;
+    padding-left: 40px;
+    padding-right: 40px;
 
     .logo {
       // max-width: 250px;

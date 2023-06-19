@@ -10,13 +10,13 @@ import HeaderImage6 from '../../images/header-image-6.png';
 function AnimatedIcons() {
   return (
     <div className={s.animation}>
-    <img className={s.image1} src={HeaderImage1} alt="" />
-    <img className={s.image2} src={HeaderImage2} alt="" />
-    <img className={s.image3} src={HeaderImage3} alt="" />
-    <img className={s.image4} src={HeaderImage4} alt="" />
-    <img className={s.image5} src={HeaderImage5} alt="" />
-    <img className={s.image6} src={HeaderImage6} alt="" />
-  </div>
+      <img className={s.image1} src={HeaderImage1} alt="" />
+      <img className={s.image2} src={HeaderImage2} alt="" />
+      <img className={s.image3} src={HeaderImage3} alt="" />
+      <img className={s.image4} src={HeaderImage4} alt="" />
+      <img className={s.image5} src={HeaderImage5} alt="" />
+      <img className={s.image6} src={HeaderImage6} alt="" />
+    </div>
   )
 }
 

@@ -11,9 +11,9 @@ import Footer from '../../components/Footer';
 import Popular from '../../components/Popular';
 import Map from "../../components/Map";
 import About from "../../components/About";
+import AnimatedIcons from "../../components/AnimatedIcons/AnimatedIcons";
 
 import s from "./MainPage.module.scss";
-import AnimatedIcons from "../../components/AnimatedIcons/AnimatedIcons";
 
 const slides = [
   {
@@ -43,8 +43,8 @@ function MainPage() {
           <Slider slides={slides} />
         </div>
         {/* <Button /> */}
-        <Header className={s.header} />
-        <Popular />
+        {/* <Header className={s.header} /> */}
+        {/* <Popular /> */}
         <Slider slides={slides}/>
         <About />
         <Map />

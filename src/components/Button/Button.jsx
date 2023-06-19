@@ -4,7 +4,7 @@ import s from './Button.module.scss'
 function Button() {
   return (
     <div>
-      <button className={s.btn}>Button</button>
+      <button className={s.btn}>Найти билет</button>
     </div>
   )
 }

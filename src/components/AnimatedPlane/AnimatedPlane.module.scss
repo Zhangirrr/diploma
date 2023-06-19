@@ -1,0 +1,74 @@
+.animation {
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.plain {
+    width: 300px;
+    margin-left: 130px;
+    animation: planeAnimation 5s infinite;
+}
+@keyframes planeAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.cloud1 {
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 100%; /* Начальное положение за пределами экрана справа */
+    animation: cloud1Animation 45s linear infinite;
+}
+
+@keyframes cloud1Animation {
+    0% {
+        transform: translateX(100%); /* Начальное положение за пределами экрана справа */
+    }
+    100% {
+        transform: translateX(-1800%); /* Конечное положение за пределами экрана слева */
+    }
+}
+
+.cloud2 {
+    width: 120px;
+    position: absolute;
+    top: 35px;
+    left: 100%; /* Начальное положение за пределами экрана справа */
+    animation: cloud2Animation 35s linear infinite;
+}
+
+@keyframes cloud2Animation {
+    0% {
+        transform: translateX(100%); /* Начальное положение за пределами экрана справа */
+    }
+    100% {
+        transform: translateX(-1800%); /* Конечное положение за пределами экрана слева */
+    }
+}
+
+.cloud3 {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 100%; /* Начальное положение за пределами экрана справа */
+    animation: cloud3Animation 25s linear infinite;
+}
+
+@keyframes cloud3Animation {
+    0% {
+        transform: translateX(100%); /* Начальное положение за пределами экрана справа */
+    }
+    100% {
+        transform: translateX(-1800%); /* Конечное положение за пределами экрана слева */
+    }
+}

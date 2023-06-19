@@ -9,8 +9,8 @@ function Router () {
     return (
         <BrowserRouter>
             <Routes>
-                {/* <Route path="/" element={<MainPage />} /> */}
-                <Route path="/" element={<DestinationPage />} />
+                <Route path="/" element={<MainPage />} />
+                {/* <Route path="/" element={<DestinationPage />} /> */}
                 {/* <Route path="/" element={<ProfilePage />} /> */}
             </Routes>
         </BrowserRouter>
