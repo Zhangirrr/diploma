@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import s from './Header.module.scss'
@@ -10,7 +10,16 @@ import iconTelephone from "../../images/icon-telephone.png";
 
 function Header() {
   const [dateFrom, setDateFrom] = useState(null);
-  const [dateTo, setDateTo] = useState(null);
+  const [dateTo, setDateTo] = useState(null);  
+
+  useEffect(() => {
+    const getData = async () => {
+        const response = await fetch(`https://events.breaktime.kz/ajy/?tickets&origin=ALA`);
+        const data = await response.json();
+        console.log(data);
+    }
+    getData();
+  }, [])
 
   return (
     <div className={s.header}>
