@@ -10,16 +10,34 @@ import iconTelephone from "../../images/icon-telephone.png";
 
 function Header() {
   const [dateFrom, setDateFrom] = useState(null);
-  const [dateTo, setDateTo] = useState(null);  
+  const [dateTo, setDateTo] = useState(null);
+  const [cityFromData, setCityFromData] = useState([]);
+  const [cityToData, setCityToData] = useState([]);
+  const [isShownCityFrom, setIsShownCityFrom] = useState(false);
+  const [isShownCityTo, setIsShownCityTo] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
         const response = await fetch(`https://events.breaktime.kz/ajy/?tickets&origin=ALA`);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
+        
+        const origin = data.map(item => item.origin);
+        setCityFromData(origin);
+
+        const destination = data.map(item => item.destination);
+        setCityToData(destination);
     }
     getData();
   }, [])
+
+  const handleCityFromClick = () => {
+    setIsShownCityFrom(!isShownCityFrom); // Переключаем состояние выпадающего окна
+  };
+
+  const handleCityToClick = () => {
+    setIsShownCityTo(!isShownCityTo); // Переключаем состояние выпадающего окна
+  };
 
   return (
     <div className={s.header}>
@@ -39,30 +57,46 @@ function Header() {
       </h2>
 
       <div className={s.tickets}>
-        <input className={s.cityFrom} type="text" placeholder="Откуда" />
-        <input className={s.cityTo} type="text" placeholder="Куда" />
+        <input className={`${s.field} ${s.cityFrom}`} type="text" placeholder="Откуда" onClick={handleCityFromClick} />
+        {isShownCityFrom && (
+          <div className={s.showCityFrom}>
+            {cityFromData.map(destination => (
+              <div key={destination}>{destination}</div>
+            ))}
+          </div>
+        )}
+
+
+        <input className={`${s.field} ${s.cityTo}`} type="text" placeholder="Куда" onClick={handleCityToClick} />
+        {isShownCityTo && (
+          <div className={s.showCityTo}>
+            {cityToData.map(destination => (
+              <div key={destination}>{destination}</div>
+            ))}
+          </div>
+        )}
 
         <DatePicker
-          className={s.dateFrom}
+          className={`${s.field} ${s.dateFrom}`}
           selected={dateFrom}
           onChange={(date) => setDateFrom(date)}
           placeholderText="Туда"
         />
 
         <DatePicker
-          className={s.dateTo}
+          className={`${s.field} ${s.dateTo}`}
           selected={dateTo}
           onChange={(date) => setDateTo(date)}
           placeholderText="Обратно"
         />
 
-        <input className={s.passenger} type="text" placeholder="Пассажиры" />
-        <button className={s.button}>Найти билет</button>
-        {/* <Button /> */}
+        <input className={`${s.field} ${s.passenger}`} type="text" placeholder="Пассажиры" />
+
+        <button className={`${s.field} ${s.button}`}>Найти билет</button>
       </div>
         <AnimatedPlane />
     </div>
   )
 }
 
-export default Header
+export default Header;

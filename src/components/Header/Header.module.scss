@@ -53,9 +53,7 @@
     .icon {
       height: 50px;
     }
-  }
-
-  
+  }  
 
   .title {
     color: white;
@@ -79,11 +77,16 @@
     .dateFrom,
     .dateTo,
     .passenger {
-      width: 100%;
+      // width: 100%;
       height: 60px;
       border-radius: 10px;
       padding: 10px;
       text-align: center;
+    }
+
+    .field {
+      max-width: 165px;
+      width: 100%;
     }
 
     .button {
@@ -95,6 +98,18 @@
       background-color: #f5780b;
       color: white;
       font-size: 20px;
+    }
+
+    .showCityFrom {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+    }
+
+    .showCityTo {
+      position: absolute;
+      top: 65%;
+      left: 0;
     }
   }
   
