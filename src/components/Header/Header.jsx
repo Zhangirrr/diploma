@@ -66,7 +66,6 @@ function Header() {
           </div>
         )}
 
-
         <input className={`${s.field} ${s.cityTo}`} type="text" placeholder="Куда" onClick={handleCityToClick} />
         {isShownCityTo && (
           <div className={s.showCityTo}>
