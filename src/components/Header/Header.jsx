@@ -59,7 +59,7 @@ function Header() {
       <div className={s.tickets}>
         <input className={`${s.field} ${s.cityFrom}`} type="text" placeholder="Откуда" onClick={handleCityFromClick} />
         {isShownCityFrom && (
-          <div className={s.showCityFrom}>
+          <div className={`${s.dropdown1} ${s.showCityFrom}`}>
             {cityFromData.map(destination => (
               <div key={destination}>{destination}</div>
             ))}
@@ -68,7 +68,7 @@ function Header() {
 
         <input className={`${s.field} ${s.cityTo}`} type="text" placeholder="Куда" onClick={handleCityToClick} />
         {isShownCityTo && (
-          <div className={s.showCityTo}>
+          <div className={`${s.dropdown2} ${s.showCityTo}`}>
             {cityToData.map(destination => (
               <div key={destination}>{destination}</div>
             ))}
