@@ -15,6 +15,8 @@ function Header() {
   const [cityToData, setCityToData] = useState([]);
   const [isShownCityFrom, setIsShownCityFrom] = useState(false);
   const [isShownCityTo, setIsShownCityTo] = useState(false);
+  const [cityFrom, setCityFrom] = useState(null);
+  const [cityTo, setCityTo] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -31,12 +33,14 @@ function Header() {
     getData();
   }, [])
 
-  const handleCityFromClick = () => {
+  const handleCityFromClick = (city) => {
     setIsShownCityFrom(!isShownCityFrom); // Переключаем состояние выпадающего окна
+    setCityFrom(city); // Сохраняем выбранный город
   };
 
-  const handleCityToClick = () => {
+  const handleCityToClick = (city) => {
     setIsShownCityTo(!isShownCityTo); // Переключаем состояние выпадающего окна
+    setCityTo(city); // Сохраняем выбранный город
   };
 
   return (
@@ -57,20 +61,30 @@ function Header() {
       </h2>
 
       <div className={s.tickets}>
-        <input className={`${s.field} ${s.cityFrom}`} type="text" placeholder="Откуда" onClick={handleCityFromClick} />
+        <input 
+          className={`${s.field} ${s.cityFrom}`} 
+          type="text" 
+          placeholder="Откуда" 
+          value={cityFrom}
+          onClick={handleCityFromClick} />
         {isShownCityFrom && (
           <div className={`${s.dropdown1} ${s.showCityFrom}`}>
             {cityFromData.map(destination => (
-              <div key={destination}>{destination}</div>
+              <div key={destination} onClick={() => handleCityFromClick(destination)}>{destination}</div>
             ))}
           </div>
         )}
 
-        <input className={`${s.field} ${s.cityTo}`} type="text" placeholder="Куда" onClick={handleCityToClick} />
+        <input 
+          className={`${s.field} ${s.cityTo}`} 
+          type="text" 
+          placeholder="Куда" 
+          value={cityTo}
+          onClick={handleCityToClick} />
         {isShownCityTo && (
           <div className={`${s.dropdown2} ${s.showCityTo}`}>
             {cityToData.map(destination => (
-              <div key={destination}>{destination}</div>
+              <div key={destination} onClick={() => handleCityToClick(destination)}>{destination}</div>
             ))}
           </div>
         )}
@@ -79,7 +93,7 @@ function Header() {
           className={`${s.field} ${s.dateFrom}`}
           selected={dateFrom}
           onChange={(date) => setDateFrom(date)}
-          placeholderText="Туда"
+          placeholderText="Когда"
         />
 
         <DatePicker
