@@ -8,6 +8,7 @@ import Logo from '../../images/logo-white.png';
 // import Button from '../Button';
 import AnimatedPlane from '../AnimatedPlane';
 import iconTelephone from "../../images/icon-telephone.png";
+import Authorization from '../Authorization/Authorization';
 
 function Header() {
   const [dateFrom, setDateFrom] = useState(null);
@@ -18,6 +19,7 @@ function Header() {
   const [isShownCityTo, setIsShownCityTo] = useState(false);
   const [cityFrom, setCityFrom] = useState(null);
   const [cityTo, setCityTo] = useState(null);
+  const [openAuthorization, setOpenAuthorization] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -44,6 +46,10 @@ function Header() {
     setCityTo(city); // Сохраняем выбранный город
   };
 
+  const handleAuthorization = () => {
+    setOpenAuthorization(true);
+  }
+
   return (
     <div className={s.header}>
       <div className={s.menu}>
@@ -51,9 +57,10 @@ function Header() {
         <div className={s.rightBlock}>
           <div className={s.telephone}>
             <img className={s.icon} src={iconTelephone} alt="" />
-            <div className={s.telNumber}>+ 7 701 555 66 77</div>
+            <a href='tel:+77015556677' className={s.telNumber} >+ 7 701 555 66 77</a>
           </div>
-          <div>Личный кабинет</div>
+          <button onClick={handleAuthorization}>Личный кабинет</button>
+          {openAuthorization && <Authorization />}
         </div>
       </div>
 

@@ -8,7 +8,8 @@ function Authorization () {
     return (
         <div className={s.authorization}>
             <div className={s.inputs}>
-                <div>Авторизация</div>
+                <div className={s.closeIcon}>x</div>
+                <div className={s.title}>Войдите в свой профиль</div>
                 
                 <input 
                     className={s.input}
@@ -22,7 +23,7 @@ function Authorization () {
                 >
                 </input>
 
-                <Button />
+                <button>Войти</button>
             </div>
         </div>
     )
