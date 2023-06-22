@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import DatePicker from 'react-datepicker';
+
 import 'react-datepicker/dist/react-datepicker.css';
-import s from './Header.module.scss'
+import s from './Header.module.scss';
 
 import Logo from '../../images/logo-white.png';
 // import Button from '../Button';
@@ -65,7 +66,7 @@ function Header() {
           className={`${s.field} ${s.cityFrom}`} 
           type="text" 
           placeholder="Откуда" 
-          value={cityFrom}
+          value={cityFrom || ''}
           onClick={handleCityFromClick} />
         {isShownCityFrom && (
           <div className={`${s.dropdown1} ${s.showCityFrom}`}>
@@ -79,7 +80,7 @@ function Header() {
           className={`${s.field} ${s.cityTo}`} 
           type="text" 
           placeholder="Куда" 
-          value={cityTo}
+          value={cityTo || ''}
           onClick={handleCityToClick} />
         {isShownCityTo && (
           <div className={`${s.dropdown2} ${s.showCityTo}`}>
