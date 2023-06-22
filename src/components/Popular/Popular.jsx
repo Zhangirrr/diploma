@@ -11,7 +11,7 @@ function Popular() {
       autoplay: true,
       infinite: true,
       autoplaySpeed: 2000,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1
     };
 
@@ -34,7 +34,7 @@ function Popular() {
                 {popularPlaces.map((popular, index) => (
                     <div key={index} className={s.slide}>
                         <img className={s.image} src={popular.image} alt={popular.alt} />
-                        <div>{popular.contry}</div>
+                        <div className={s.country}>{popular.contry}</div>
                     </div>
                 ))}
               </Slider>

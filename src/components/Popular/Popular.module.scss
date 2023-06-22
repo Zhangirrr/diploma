@@ -15,18 +15,20 @@
     font-size: 40px;
     padding-top: 50px
 }
-.subtitle {
+.country {
     font-weight: 400;
     color: #1A77BC;
     font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 .images {
-    padding: 15px;
+    // padding: 5px;
 }
 .image {
     width: 250px;
     height: 250px;
-    border-radius: 15px;
+    border-radius: 25px;
+    padding: 10px;
 }
