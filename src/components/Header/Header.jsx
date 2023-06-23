@@ -23,27 +23,27 @@ function Header({ renderTitle = true, renderAnimatedPlane = true }) {
 
   useEffect(() => {
     const getData = async () => {
-        const response = await fetch(`https://events.breaktime.kz/ajy/?tickets&origin=ALA`);
+        const response = await fetch(`https://events.breaktime.kz/ajy/?tickets`);
         const data = await response.json();
-        // console.log(data);
+        console.log(data);
         
-        const origin = data.map(item => item.origin);
+        const origin = data.map(item => item.originCity);
         setCityFromData(origin);
 
-        const destination = data.map(item => item.destination);
+        const destination = data.map(item => item.destinationCity);
         setCityToData(destination);
     }
     getData();
   }, [])
 
   const handleCityFromClick = (city) => {
-    setIsShownCityFrom(!isShownCityFrom); // Переключаем состояние выпадающего окна
+    setIsShownCityFrom(!isShownCityFrom); // Переключаем состояние выпадающего окна через ! ture false попеременно
     setCityFrom(city); // Сохраняем выбранный город
   };
 
   const handleCityToClick = (city) => {
-    setIsShownCityTo(!isShownCityTo); // Переключаем состояние выпадающего окна
-    setCityTo(city); // Сохраняем выбранный город
+    setIsShownCityTo(!isShownCityTo);
+    setCityTo(city);
   };
 
   const handleAuthorization = () => {
@@ -76,7 +76,8 @@ function Header({ renderTitle = true, renderAnimatedPlane = true }) {
           type="text" 
           placeholder="Откуда" 
           value={cityFrom || ''}
-          onClick={handleCityFromClick} />
+          onChange={handleCityFromClick}
+          onClick={() => setIsShownCityFrom(!isShownCityFrom)} />
         {isShownCityFrom && (
           <div className={`${s.dropdown1} ${s.showCityFrom}`}>
             {cityFromData.map(destination => (
@@ -90,7 +91,8 @@ function Header({ renderTitle = true, renderAnimatedPlane = true }) {
           type="text" 
           placeholder="Куда" 
           value={cityTo || ''}
-          onClick={handleCityToClick} />
+          onChange={handleCityToClick}
+          onClick={() => setIsShownCityTo(!isShownCityTo)} />
         {isShownCityTo && (
           <div className={`${s.dropdown2} ${s.showCityTo}`}>
             {cityToData.map(destination => (
