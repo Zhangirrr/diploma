@@ -6,105 +6,120 @@
       "lat": "52.285577",
       "lon": "76.940722",
       "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
-      "center": "52.285577, 76.940722"
+      "center": "52.285577, 76.940722",
+      "lowprice": "47000"
     },
     {
       "id": 2,
-      "city": "Алмата",
+      "city": "Алматы",
       "lat": "43.273564",
       "lon": "76.914851",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "25000"
     },
     {
       "id": 3,
       "city": "Астана",
       "lat": "51.128201",
       "lon": "71.430429",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "44000"
     },
     {
       "id": 4,
       "city": "Шымкент",
       "lat": "42.315521",
       "lon": "69.586942",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "25000"
     },
     {
       "id": 5,
       "city": "Актобе",
       "lat": "50.300377",
       "lon": "57.154555",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "25000"
     },
     {
       "id": 6,
       "city": "Караганда",
       "lat": "49.807760",
       "lon": "73.088504",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "45200"
     },
     {
       "id": 7,
       "city": "Тараз",
       "lat": "42.899664",
       "lon": "71.392727",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "25000"
     },
     {
       "id": 8,
       "city": "Усть-Каменогорск",
       "lat": "49.948325",
       "lon": "82.627848",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "56700"
     },
     {
       "id": 9,
       "city": "Атырау",
       "lat": "47.106799",
       "lon": "51.916874",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "88000"
     },
     {
       "id": 10,
       "city": "Петропавловск",
       "lat": "54.861860",
       "lon": "69.139617",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "37950"
     },
     {
       "id": 11,
       "city": "Семей",
       "lat": "50.404976",
       "lon": "80.249235",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "25000"
     },
     {
       "id": 12,
       "city": "Костанай",
       "lat": "53.214496",
       "lon": "63.632100",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "53400"
     },
     {
       "id": 13,
       "city": "Актау",
       "lat": "43.635588",
       "lon": "51.168245",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "79800"
     },
     {
       "id": 14,
       "city": "Уральск",
       "lat": "51.204030",
       "lon": "51.370528",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "45000"
     },
     {
       "id": 15,
       "city": "Туркестан",
       "lat": "43.302025",
       "lon": "68.268979",
-      "icon": "https://img.icons8.com/?size=512&id=8771&format=png"
+      "icon": "https://img.icons8.com/?size=512&id=8771&format=png",
+      "lowprice": "15000"
     }
   ]
 }

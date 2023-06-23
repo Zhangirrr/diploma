@@ -10,7 +10,7 @@ import AnimatedPlane from '../AnimatedPlane';
 import iconTelephone from "../../images/icon-telephone.png";
 import Authorization from '../Authorization/Authorization';
 
-function Header() {
+function Header({ renderTitle = true, renderAnimatedPlane = true }) {
   const [dateFrom, setDateFrom] = useState(null);
   const [dateTo, setDateTo] = useState(null);
   const [cityFromData, setCityFromData] = useState([]);
@@ -59,14 +59,16 @@ function Header() {
             <img className={s.icon} src={iconTelephone} alt="" />
             <a href='tel:+77015556677' className={s.telNumber} >+ 7 701 555 66 77</a>
           </div>
-          <button onClick={handleAuthorization}>Личный кабинет</button>
+          <button className={s.cabinet} onClick={handleAuthorization}>Личный кабинет</button>
           {openAuthorization && <Authorization />}
         </div>
       </div>
 
-      <h2 className={s.title}>
-        Бронирование авиабилетов
-      </h2>
+      {renderTitle && (
+        <h2 className={s.title}>
+          Бронирование авиабилетов
+        </h2>
+      )}
 
       <div className={s.tickets}>
         <input 
@@ -115,7 +117,8 @@ function Header() {
 
         <button className={`${s.field} ${s.button}`}>Найти билет</button>
       </div>
-        <AnimatedPlane />
+
+      {renderAnimatedPlane && <AnimatedPlane />}
     </div>
   )
 }

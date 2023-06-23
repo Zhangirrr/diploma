@@ -17,7 +17,7 @@ function Footer() {
         <div className={s.title}>Откройте для себя весь мир!</div>
       </div>
 
-      <div className={s.footerBottom}>
+      {/* <div className={s.footerBottom}>
         <div className={s.footerColumn}>
           <div className={s.title}>Страны</div>
           <div>Список</div>
@@ -37,7 +37,7 @@ function Footer() {
           <div className={s.title}>Авиакомпании</div>
           <div>Список</div>
         </div>
-      </div>
+      </div> */}
 
       <div className={s.footerContacts}>
         <img className={s.logo} src={Logo} alt="" />

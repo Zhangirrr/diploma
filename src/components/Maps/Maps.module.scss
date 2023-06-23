@@ -1,8 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 50px;    
+}
 .map{
     width: 50%;
     min-height: 500px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: -4px 4px 5px #e9e9e9;
 }
 .cityLabel{
-    // color: red;
-    // font-size: 120px;
+    font-size: 10px;
+    margin-top: -15px;
+    color: #1A77BC;
+    font-family: "Gilroy-Regular";
+    font-weight: 700;
+}
+.icon {
+    opacity: 50%;
+}
+.title {
+    font-family: "Gilroy-Regular";
+    color: #1A77BC;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.cityList {
+    border-radius: 15px;
+    box-shadow: -4px 4px 5px #e9e9e9;
+    padding: 25px;
+    min-height: 500px; 
+}
+.cityBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 6px;
+    font-family: "Gilroy-Regular";
+    background-color: #ffffff;    
 }

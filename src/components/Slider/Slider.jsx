@@ -37,7 +37,9 @@ function Slider( { slides = [] }) {
           {slides.map((elem) => (
             <SwiperSlide>
               {elem.image && (
-                <img className={s.slideImage} src={elem.image} />
+                <a href={elem.src}>
+                  <img className={s.slideImage} src={elem.image} />
+                </a>
               )}
             </SwiperSlide>
           ))}

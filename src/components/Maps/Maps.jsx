@@ -38,7 +38,8 @@ const Map = () => {
         const customIcon = L.icon({
           iconUrl: item.icon,
           iconSize: [20, 20], 
-          iconAnchor: [10, 10], 
+          iconAnchor: [10, 10],
+          className: s.icon,
         });
 
         const marker = L.marker([item.lat, item.lon], {
@@ -46,7 +47,14 @@ const Map = () => {
           alt: item.city,
         }).addTo(mapRef.current);
 
-        marker.bindTooltip(item.city, {
+        const tooltipContent = `
+          <div>
+            <div>${item.city}</div>
+            <div>${item.lowprice} ₸</div>
+          </div>
+        `;
+
+        marker.bindTooltip(tooltipContent, {
           permanent: true, 
           direction: "top", 
           className: s.cityLabel, 
@@ -55,7 +63,21 @@ const Map = () => {
     }
   }, [coords]);
 
-  return <div id="map" className={s.map}></div>;
+  return (
+    <div className={s.container}>
+      <div className={s.cityList}>
+        <div className={s.title}>Найти билет по Казахстану</div>
+        {coords.map((item) => (
+          <div className={s.cityBlock}>
+            <div>{item.city}</div>
+            <div>{item.lowprice} ₸</div>
+          </div>
+        ))}
+      </div>
+      <div id="map" className={s.map}></div>
+    </div>
+    
+  );
 };
 
 export default Map;

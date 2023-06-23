@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Slider from "../../components/Slider";
 import slide1 from "../../images/slide-1.png";
@@ -19,18 +20,22 @@ const slides = [
   {
     id: 0,
     image: slide1,
+    src: "https://www.aviasales.ru/"
   },
   {
     id: 1,
     image: slide2,
+    src: "https://www.aviasales.ru/"
   },
   {
     id: 2,
     image: slide3,
+    src: "https://www.aviasales.ru/"
   },
   {
     id: 3,
     image: slide4,
+    src: "https://www.aviasales.ru/"
   },
 ];
 
@@ -39,17 +44,12 @@ function MainPage() {
     <div>
       <div className={s.container}>
         <Header />
-        <div className={s.slider}>
-          <Slider slides={slides} />
-        </div>
-        {/* <Button /> */}
-        {/* <Header className={s.header} /> */}
-        {/* <Popular /> */}
+        <Popular />        
         <Slider slides={slides}/>
-        <About />
-        <Map />
-        <Popular />
-        {/* <Button /> */}
+        <About />                
+        <Link to="/destination">
+          <Map />
+        </Link>        
         <Footer />
       </div>
     </div>
