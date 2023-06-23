@@ -1,15 +1,34 @@
 .popular {
     font-family: "Gilroy-Regular";
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 45px;
 }
 .container {
     display: flex;
     flex-direction: column;
 }
+.title {
+    font-weight: 400;
+    color: #1A77BC;
+    font-size: 40px;
+    padding-top: 50px
+}
+.country {
+    font-weight: 400;
+    color: #1A77BC;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+}
 .images {
-    display: flex;
-    flex-direction: row;
+    // padding: 5px;
 }
 .image {
     width: 250px;
     height: 250px;
+    border-radius: 25px;
+    padding: 10px;
 }
