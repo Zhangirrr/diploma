@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DatePicker from 'react-datepicker';
+import { Link } from 'react-router-dom';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import s from './Header.module.scss';
@@ -9,6 +10,7 @@ import Logo from '../../images/logo-white.png';
 import AnimatedPlane from '../AnimatedPlane';
 import iconTelephone from "../../images/icon-telephone.png";
 import Authorization from '../Authorization/Authorization';
+import AuthorizationPage from '../../pages/AuthorizationPage';
 
 function Header({ renderTitle = true, renderAnimatedPlane = true }) {
   const [dateFrom, setDateFrom] = useState(null);
@@ -59,8 +61,12 @@ function Header({ renderTitle = true, renderAnimatedPlane = true }) {
             <img className={s.icon} src={iconTelephone} alt="" />
             <a href='tel:+77015556677' className={s.telNumber} >+ 7 701 555 66 77</a>
           </div>
+
+          {/* <Link to="/authorization" className={s.cabinet}>Личный кабинет</Link> */}
           <button className={s.cabinet} onClick={handleAuthorization}>Личный кабинет</button>
-          {openAuthorization && <Authorization />}
+
+          {openAuthorization && <Authorization setOpenAuthorization={setOpenAuthorization} />}
+
         </div>
       </div>
 

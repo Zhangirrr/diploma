@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainPage from "./pages/MainPage/MainPage";
 import ProfilePage from "./pages/ProfilePage";
-import DestinationPage from "./pages/DestinationPage/DestinationPage";
+import DestinationPage from "./pages/DestinationPage";
+import AuthorizationPage from "./pages/AuthorizationPage";
 
 function Router () {
     return (
@@ -11,6 +12,7 @@ function Router () {
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/destination" element={<DestinationPage />} />
+                <Route path="/authorization" component={AuthorizationPage} />
                 {/* <Route path="/" element={<ProfilePage />} /> */}
             </Routes>
         </BrowserRouter>

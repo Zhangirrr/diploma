@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 import s from "./Authorization.module.scss";
 
-import Button from "../Button";
+function Authorization({ setOpenAuthorization }) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-function Authorization () {
+    const onEmailChange = (event) => {
+        setEmail(event.target.value)
+    }
+
+    const onPasswordChange = (event) => {
+        setPassword(event.target.value)
+    }
+
+    const handleClose = () => {
+        setOpenAuthorization(false);
+      };
+
     return (
         <div className={s.authorization}>
-            <div className={s.inputs}>
-                <div className={s.closeIcon}>x</div>
-                <div className={s.title}>Войдите в свой профиль</div>
-                
-                <input 
-                    className={s.input}
-                    placeholder="E-mail" 
-                >
-                </input>
+            <div className={s.container}>
+                <div className={s.topContainer}>
+                    <div className={s.title}>Войдите в профиль</div>
+                    <div className={s.closeButton} onClick={handleClose}>x</div>
+                </div>
 
-                <input 
-                    className={s.input}
+                <input className={s.input}
+                    value={email} 
+                    onChange={onEmailChange} 
+                    placeholder="E-mail" 
+                    label="Email Address"
+                ></input>
+
+                <input className={s.input}
+                    value={password} 
+                    onChange={onPasswordChange} 
                     placeholder="Пароль" 
-                >
-                </input>
+                    label="Password"
+                ></input>
 
                 <button>Войти</button>
             </div>

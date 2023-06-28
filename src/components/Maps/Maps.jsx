@@ -8,6 +8,7 @@ const endpoint = process.env.REACT_APP_ENDPOINT || "";
 const Map = () => {
   const mapRef = useRef(null);
   const [coords, setCoords] = useState([]);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   useEffect(() => {
     fetch(`${endpoint}/markers`)
@@ -23,13 +24,24 @@ const Map = () => {
     });
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "Карта принадлежит Асель и Жангир &copy;",
+      attribution: "Карта принадлежит Асель и Жангиру &copy;",
     }).addTo(mapRef.current);
 
     return () => {
       mapRef.current.remove();
     };
   }, []);
+
+  const handleCityClick = (city) => {
+    const selectedCityCoords = coords.find((item) => item.city === city);
+    if (selectedCityCoords) {
+      setSelectedCity(city);
+      mapRef.current.panTo([selectedCityCoords.lat, selectedCityCoords.lon]);
+    }
+  };
+
+  // panTo - это метод из библиотеки Leaflet, который позволяет
+  // плавно перемещать центр карты к координатам выбранного города
 
   useMemo(() => {
     if (coords.length > 0) {
@@ -68,7 +80,11 @@ const Map = () => {
       <div className={s.cityList}>
         <div className={s.title}>Найти билет по Казахстану</div>
         {coords.map((item) => (
-          <div className={s.cityBlock}>
+          <div 
+            key={item.city}
+            className={`${s.cityBlock} ${selectedCity === item.city ? s.selected : ""}`}
+            onClick={() => handleCityClick(item.city)}
+          >
             <div>{item.city}</div>
             <div>{item.lowprice} ₸</div>
           </div>
