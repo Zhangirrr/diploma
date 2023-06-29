@@ -1,35 +1,132 @@
+// .animation {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     overflow: visible;
+//     margin: 0 auto;
+//   }
+
+//   .animation .image1,
+//   .animation .image2,
+//   .animation .image3,
+//   .animation .image4,
+//   .animation .image5,
+//   .animation .image6 {
+//     flex: 0 0 auto;
+//     width: 100%;
+//     max-width: 110px;
+//     transition: 1s;
+//     bottom: -20px;
+//     position: relative;
+//     align-items: center;
+//     margin-right: 10px;
+//   }
+
+//   .animation .image1:hover,
+//   .animation .image2:hover,
+//   .animation .image3:hover,
+//   .animation .image4:hover,
+//   .animation .image5:hover,
+//   .animation .image6:hover {
+//     transform: translateY(-10px);
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+
+
+// .animation {
+//   position: relative;
+//   max-width: 110px;
+//   width: 100%;
+//   height: 100%;
+// }
+.image1, .image3, .image4, .image5, .image6  {
+  max-width: 90px;
+}
+
+.image2 {
+  max-width: 140px;
+}
+
 .animation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: visible;
-    margin: 0 auto;
-  }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .animation .image1,
-  .animation .image2,
-  .animation .image3,
-  .animation .image4,
-  .animation .image5,
-  .animation .image6 {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 110px;
-    transition: 1s;
-    bottom: -70px;
-    position: relative;
-    align-items: center;
-    margin-right: 10px;
-  }
+.animation .image2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
 
-  .animation .image1:hover,
-  .animation .image2:hover,
-  .animation .image3:hover,
-  .animation .image4:hover,
-  .animation .image5:hover,
-  .animation .image6:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease-in-out;
-  }
+.animation .image2 {
+  z-index: 2; /* Повышаем z-index для image2 */
+}
+
+.animation .image1 {
+  position: absolute;
+  top: 43%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.animation:hover .image1 {
+  transform: translate(-50%, -70%); /* Поднимаем вверх при наведении на .animation */
+}
+
+.animation .image3 {
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.animation:hover .image3 {
+  transform: translate(-50%, -70%); /* Поднимаем вверх при наведении на .animation */
+}
+
+.animation .image4 {
+  position: absolute;
+  top: 38%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.animation:hover .image4 {
+  transform: translate(-50%, -70%); /* Поднимаем вверх при наведении на .animation */
+}
+
+.animation .image5 {
+  position: absolute;
+  top: 33%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.animation:hover .image5 {
+  transform: translate(-50%, -70%); /* Поднимаем вверх при наведении на .animation */
+}
+
+.animation .image6 {
+  position: absolute;
+  top: 29%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.animation:hover .image6 {
+  transform: translate(-50%, -70%); /* Поднимаем вверх при наведении на .animation */
+}

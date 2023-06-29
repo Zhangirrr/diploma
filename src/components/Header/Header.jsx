@@ -55,14 +55,16 @@ function Header({ renderTitle = true, renderAnimatedPlane = true }) {
   return (
     <div className={s.header}>
       <div className={s.menu}>
-        <img className={s.logo} src={Logo} alt="" />
+        <Link to="/">
+          <img className={s.logo} src={Logo} alt="" />
+        </Link>
+        
         <div className={s.rightBlock}>
           <div className={s.telephone}>
             <img className={s.icon} src={iconTelephone} alt="" />
             <a href='tel:+77015556677' className={s.telNumber} >+ 7 701 555 66 77</a>
           </div>
 
-          {/* <Link to="/authorization" className={s.cabinet}>Личный кабинет</Link> */}
           <button className={s.cabinet} onClick={handleAuthorization}>Личный кабинет</button>
 
           {openAuthorization && <Authorization setOpenAuthorization={setOpenAuthorization} />}

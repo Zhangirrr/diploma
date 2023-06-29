@@ -17,27 +17,43 @@ function Footer() {
         <div className={s.title}>Откройте для себя весь мир!</div>
       </div>
 
-      {/* <div className={s.footerBottom}>
+      <div className={s.footerBottom}>
         <div className={s.footerColumn}>
           <div className={s.title}>Страны</div>
-          <div>Список</div>
+          <div>Австралия</div>
+          <div>Бельгия</div>
+          <div>Катар</div>
+          <div>Казахстан</div>
+          <div>Германия</div>
         </div>
 
         <div className={s.footerColumn}>
           <div className={s.title}>Города</div>
-          <div>Список</div>
+          <div>Амстердам</div>
+          <div>Вена</div>
+          <div>Париж</div>
+          <div>Рио-де-Жанейро</div>
+          <div>Прага</div>
         </div>
 
         <div className={s.footerColumn}>
-          <div className={s.title}>Направления</div>
-          <div>Список</div>
+          <div className={s.title}>Отели в Астане</div>
+          <div>Уют</div>
+          <div>Lion Отель</div>
+          <div>Come INN</div>
+          <div>Altyn Eco Park</div>
+          <div>MirOtel Hotel</div>
         </div>
 
         <div className={s.footerColumn}>
-          <div className={s.title}>Авиакомпании</div>
-          <div>Список</div>
+          <div className={s.title}>Сервисы</div>
+          <div>Поддержка</div>
+          <div>Трансфер</div>
+          <div>Проживание</div>
+          <div>Питание</div>
+          <div>Для детей</div>
         </div>
-      </div> */}
+      </div>
 
       <div className={s.footerContacts}>
         <img className={s.logo} src={Logo} alt="" />

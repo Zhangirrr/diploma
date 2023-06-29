@@ -1,0 +1,58 @@
+.about {
+    font-family: "Gilroy-Regular";
+    width: 60%;
+    margin: 0 auto;
+    // padding-bottom: 35px;
+}
+.block {
+    display: flex;
+    flex-direction: row;
+
+    .leftBlock {
+        width: 660px;
+    }
+
+    .rightBlock {
+        width: 300px;
+        margin-left: 15px;
+    }
+  }
+.title {
+    font-weight: 400;
+    color: #1A77BC;
+    font-size: 40px;
+    padding-top: 50px;
+}
+.text {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+.table{
+	border: 1px solid #eee;
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 20px;
+    margin-bottom: 50px;
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td{
+	padding: 5px 10px;
+	// border: 1px solid #eee;
+	text-align: center;
+}
+.table tbody tr:nth-child(odd){
+	background: #fff;
+}
+.table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}

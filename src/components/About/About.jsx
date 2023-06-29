@@ -3,6 +3,7 @@ import React from "react";
 import s from "./About.module.scss";
 
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 function About () {
     return (
@@ -17,7 +18,10 @@ function About () {
                 АО «Фонд национального благосостояния «Самрук-Казына», и компании BAE Systems PLC 
                 (Великобритания) (49 процентов) партнерские отношения акционеров оставались стабильными 
                 в течение всей истории развития авиакомпании.</p>
-            {/* <Button /> */}
+            
+            <Link to="/about">
+                <button className={s.moreButton}>Узнать больше</button>
+            </Link>
         </div>
     )
 }
